@@ -19,6 +19,7 @@ gradle-app.setting
 /.idea
 .DS_Store
 /build
+*/build
 /captures
 .externalNativeBuild
 .cxx
