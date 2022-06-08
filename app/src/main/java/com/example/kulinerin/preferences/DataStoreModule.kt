@@ -18,5 +18,4 @@ object DataStoreModule {
     @Singleton
     fun sessionManager(@ApplicationContext appContext: Context): SessionManager =
         SessionManager(appContext)
-
 }

@@ -14,7 +14,7 @@ abstract class UserDatabase : RoomDatabase() {
                 ?: synchronized(this) {
                     INSTANCE
                         ?: Room.databaseBuilder(
-                            context.applicationContext, UserDatabase::class.java, "story_database")
+                            context.applicationContext, UserDatabase::class.java, "user_database")
                             .fallbackToDestructiveMigration()
                             .build()
                             .also { INSTANCE = it }

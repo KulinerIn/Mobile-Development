@@ -1,16 +1,13 @@
 package com.example.kulinerin.auth.ui
 
-import android.util.Log
-import androidx.lifecycle.*
-import com.example.kulinerin.api.ApiModule
-import com.example.kulinerin.auth.model.LoginResponse
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.kulinerin.auth.model.Credentials
 import com.example.kulinerin.preferences.SessionManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import javax.inject.Inject
 
 @HiltViewModel

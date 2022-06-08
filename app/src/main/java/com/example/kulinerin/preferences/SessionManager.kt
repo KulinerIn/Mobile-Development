@@ -26,10 +26,6 @@ class SessionManager(appContext: Context) {
         return userPreferences.data.map { preferences -> preferences[token] ?: "" }
     }
 
-    suspend fun saveSession(token: String) {
-        setToken(token)
-    }
-
     suspend fun clearSession() {
         userPreferences.edit { preferences -> preferences.clear() }
     }
