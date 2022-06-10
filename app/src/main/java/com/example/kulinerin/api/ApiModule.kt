@@ -9,13 +9,14 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.create
 import javax.inject.Singleton
 import kotlin.coroutines.coroutineContext
 
 @Module
 @InstallIn(SingletonComponent::class)
 object ApiModule {
-    private const val API_BASE_URL = ""
+    private const val API_BASE_URL = "https://kulinerin-fv4qnoj45a-uc.a.run.app/"
 
     @Provides
     @Singleton
@@ -28,24 +29,23 @@ object ApiModule {
             }
         }
 
-    @AuthInterceptorOkHttpClient
     @Provides
     @Singleton
-    fun providesOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor, authInterceptor: AuthInterceptor): OkHttpClient =
+    fun providesOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient =
         OkHttpClient.Builder()
             .addInterceptor(httpLoggingInterceptor)
-            .addInterceptor(authInterceptor)
             .build()
 
     @Provides
     @Singleton
-    fun providesAuthApiService(okHttpClient: OkHttpClient): ApiService =
+    fun providesRetrofit(okHttpClient: OkHttpClient): Retrofit =
             Retrofit.Builder()
                 .baseUrl(API_BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build()
-                .create(ApiService::class.java)
 
-
+    @Provides
+    @Singleton
+    fun providesApiService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
 }

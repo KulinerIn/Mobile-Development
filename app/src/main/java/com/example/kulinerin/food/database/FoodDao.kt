@@ -3,7 +3,7 @@ package com.example.kulinerin.food.database
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
-import com.example.kulinerin.food.model.Food
+import com.example.kulinerin.food.model.pojo.Food
 
 @Dao
 interface FoodDao {

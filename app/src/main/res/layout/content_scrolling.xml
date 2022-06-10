@@ -15,7 +15,7 @@
 
         <TextView
             android:id="@+id/title_description"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
             android:text="@string/title_description"
@@ -26,7 +26,7 @@
 
         <TextView
             android:id="@+id/text_description"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
             app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
 
         <TextView
             android:id="@+id/title_recipe"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
             android:text="@string/title_how_to_make"
@@ -45,12 +45,33 @@
             app:layout_constraintTop_toBottomOf="@id/text_description" />
 
         <TextView
-            android:id="@+id/text_recipe"
-            android:layout_width="wrap_content"
+            android:id="@+id/title_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:text="@string/title_ingredients"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/text_ingredients"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_recipe" />
+
+        <TextView
+            android:id="@+id/text_ingredients"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/text_margin"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/title_recipe"
+            app:layout_constraintTop_toBottomOf="@id/title_ingredients"
+            tools:text="@tools:sample/lorem" />
+
+        <TextView
+            android:id="@+id/text_directions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_ingredients"
             tools:text="@tools:sample/lorem" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

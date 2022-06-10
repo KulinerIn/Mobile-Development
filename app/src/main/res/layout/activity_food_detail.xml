@@ -21,11 +21,11 @@
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
-            app:title="@string/app_name"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
             app:toolbarId="@+id/toolbar">
 
             <ImageView
+                android:id="@+id/food_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:contentDescription="@string/text_food_image" />
@@ -40,7 +40,8 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_scrolling" />
+    <include layout="@layout/content_scrolling"
+        android:id="@+id/content"/>
 
 
 
