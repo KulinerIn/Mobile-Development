@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">KulinerIn</string>
-    <string name="title_activity_food_detail">FoodDetailActivity</string>
+    <string name="title_activity_food_detail" translatable="false">FoodDetailActivity</string>
     <string name="action_settings">Settings</string>
     <string name="food_image">Food Image</string>
     <string name="title_description">Description</string>
     <string name="title_how_to_make">How to Make</string>
-    <string name="text_food_image">food_image</string>
+    <string name="text_food_image" translatable="false">food_image</string>
     <string name="title_ingredients">Ingredients</string>
 </resources>

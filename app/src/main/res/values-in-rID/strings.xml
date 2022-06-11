@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KulinerIn</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="food_image">Gambar Jajanan</string>
+    <string name="title_description">Deskripsi</string>
+    <string name="title_how_to_make">Cara Membuat</string>
+    <string name="title_ingredients">Bahan-bahan</string>
+</resources>
