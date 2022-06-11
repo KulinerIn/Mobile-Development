@@ -3,6 +3,8 @@
     package="com.example.kulinerin">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name=".MainApp"
@@ -13,10 +15,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KulinerIn">
         <activity
-            android:name=".food.ui.FoodDetailActivity"
-            android:exported="true"
-            android:label="@string/title_activity_food_detail"
-            android:theme="@style/Theme.KulinerIn.NoActionBar">
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".scan.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".scan.ConfirmImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
@@ -24,14 +33,15 @@
         </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:name=".food.ui.FoodDetailActivity"
+            android:exported="true"
+            android:label="@string/title_activity_food_detail"
+            android:theme="@style/Theme.KulinerIn.NoActionBar">
         </activity>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
 
 </manifest>
