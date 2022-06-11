@@ -34,8 +34,10 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ToolbarTheme"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/Theme.KulinerIn.PopupOverlay" />
+                app:popupTheme="@style/Theme.KulinerIn.PopupOverlay"
+                tools:text="@tools:sample/lorem"/>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
